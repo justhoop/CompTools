@@ -123,7 +123,6 @@ Func GetLocalAdmins($host)
 	For $objGroup In $colGroups         
 		If $objGroup.name = "Administrators" Then               
 			For $objUser In $objGroup.Members
-				MsgBox(1,"",$objUser.name)
 				If StringInStr($objUser.name, ".") Then
 					$output = $output & $objUser.name & ","
 					$display = $display & $objUser.name & @CRLF
