@@ -1,5 +1,6 @@
 #include <MsgBoxConstants.au3>
 #include <Inet.au3>
+#RequireAdmin
 
 While 1
 	Global $watchlist = FileReadToArray("watch.txt")
@@ -8,6 +9,8 @@ While 1
 		Write()
 	EndIf
 	Sleep(600000)
+	ShellExecute("ipconfig","/flushdns")
+	ShellExecute("nbtstat","-RR")
 Wend
 
 Func Watch()
