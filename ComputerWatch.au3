@@ -9,8 +9,8 @@ While 1
 		Write()
 	EndIf
 	Sleep(600000)
-	ShellExecute("ipconfig","/flushdns")
-	ShellExecute("nbtstat","-RR")
+	ShellExecute("ipconfig","/flushdns","","",@SW_HIDE)
+	ShellExecute("nbtstat","-RR","","",@SW_HIDE)
 Wend
 
 Func Watch()
